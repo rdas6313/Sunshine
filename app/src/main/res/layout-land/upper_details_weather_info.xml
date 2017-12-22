@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="32dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/detailsWeatherDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintRight_toRightOf="@id/guideline"
+            tools:text="Today, December 9"
+            app:layout_constraintHorizontal_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/detailsWeatherIcon"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintHorizontal_bias="0.61"
+            app:layout_constraintLeft_toRightOf="@id/guideline"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            tools:src="@drawable/w176" />
+
+        <TextView
+            android:id="@+id/detailsWeatherCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:maxWidth="150dp"
+            android:textAlignment="center"
+            android:textColor="@color/secondary_text"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintLeft_toLeftOf="@id/detailsWeatherIcon"
+            app:layout_constraintRight_toRightOf="@id/detailsWeatherIcon"
+            app:layout_constraintTop_toBottomOf="@id/detailsWeatherIcon"
+
+            tools:text="Moderate clouds and heavy Rain possible" />
+
+
+        <TextView
+            android:id="@+id/detailsWeatherTempMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/primary_text"
+            android:textSize="72sp"
+            app:layout_constraintBottom_toBottomOf="@id/detailsWeatherIcon"
+            app:layout_constraintHorizontal_bias="0.62"
+            app:layout_constraintLeft_toRightOf="@id/guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="@string/designTemp" />
+
+        <TextView
+            android:id="@+id/detailsWeatherTempMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/secondary_text"
+            android:textSize="36sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/detailsWeatherCondition"
+            app:layout_constraintLeft_toLeftOf="@id/detailsWeatherTempMax"
+            app:layout_constraintRight_toRightOf="@id/detailsWeatherTempMax"
+            tools:text="@string/designTemp" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

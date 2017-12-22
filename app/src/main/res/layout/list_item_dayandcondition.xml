@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/weatherDate"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        tools:text="Today December 5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/weatherCondition"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        tools:text="Light Rain and Moderate"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/secondary_text"
+        android:layout_marginTop="1dp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/weatherDate"
+        app:layout_constraintLeft_toLeftOf="@+id/weatherDate" />
+</android.support.constraint.ConstraintLayout>
+</layout>

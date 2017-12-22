@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingBottom="@dimen/forecast_detail_vertical_padding"
+    android:paddingEnd="@dimen/forecast_detail_horizontal_padding"
+    android:paddingLeft="@dimen/forecast_detail_horizontal_padding"
+    android:paddingRight="@dimen/forecast_detail_horizontal_padding"
+    android:paddingStart="@dimen/forecast_detail_horizontal_padding"
+    android:paddingTop="@dimen/forecast_detail_vertical_padding"
+    >
+
+    <!--
+
+    android:paddingLeft="32dp"
+    android:paddingTop="36dp"
+    -->
+
+    <TextView
+        android:fontFamily="sans-serif"
+        android:textColor="@color/detail_accent_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average Humidity"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.19999999"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        android:id="@+id/avgHumidity" />
+    <TextView
+        android:textColor="@android:color/black"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        tools:text="78%"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/avgHumidity"
+        android:layout_marginLeft="0dp"
+        android:id="@+id/avgHumidityValue"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/avgHumidity"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginStart="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.8" />
+
+    <TextView
+        android:textColor="@color/detail_accent_label"
+        android:fontFamily="sans-serif"
+        android:id="@+id/pressureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Pressure"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/avgHumidity"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/avgHumidity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="998 mBar"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/pressureLabel"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/pressureLabel"
+        android:id="@+id/pressureValue"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/avgHumidityValue" />
+    <TextView
+        android:fontFamily="sans-serif"
+        android:textColor="@color/detail_accent_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maxumum Wind "
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:id="@+id/windLabel"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toBottomOf="@id/pressureLabel"
+        app:layout_constraintLeft_toLeftOf="@+id/pressureLabel" />
+    <TextView
+        android:textColor="@android:color/black"
+        android:id="@+id/windValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="3 km/h"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/windLabel"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/windLabel"
+        app:layout_constraintVertical_bias="0.56"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/pressureValue" />
+</android.support.constraint.ConstraintLayout>
+</layout>
